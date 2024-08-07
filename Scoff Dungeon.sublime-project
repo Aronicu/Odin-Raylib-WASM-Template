@@ -1,0 +1,41 @@
+{
+	"folders":
+	[
+		{
+            "path": ".",
+            "file_exclude_patterns": ["*.sln", "*.exp"],
+        },
+	],
+
+	"build_systems":
+	[
+		{
+			"name": "Hot Reload",
+			"working_dir": "$project_path",
+			"shell_cmd": "build_reload.bat",
+			"file_regex": "^(.+)\\(([0-9]+):([0-9]+)\\) (.+)$"
+		},
+		{
+			"name": "Build Release",
+			"working_dir": "$project_path",
+			"shell_cmd": "build_release.bat",
+			"file_regex": "^(.+)\\(([0-9]+):([0-9]+)\\) (.+)$"
+		},
+		{
+			"name": "Build Web Release",
+			"working_dir": "$project_path",
+			"shell_cmd": "build_wasm.bat",
+			"file_regex": "^(.+)\\(([0-9]+):([0-9]+)\\) (.+)$"
+		},
+	],
+	"settings":
+	{
+		"LSP":
+		{
+			"odin":
+			{
+				"enabled": true
+			}
+		}
+	},
+}

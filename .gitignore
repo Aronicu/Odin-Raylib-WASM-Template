@@ -1,0 +1,11 @@
+.vs/
+build/
+wasm_build/
+*.sln
+*.exe
+*.pdb
+*.exp
+*.sublime-workspace
+game.dll
+game.lib
+raylib.dll
